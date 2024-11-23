@@ -13,17 +13,17 @@ def index(request):
 #     return HttpResponse ("about real estate")
 
 def removepunc(request):
-    return HttpResponse ("2 bedroom flat")
+    return HttpResponse ("2 bedroom flat <a href= '/'>home</a>")
 
 def capfirst(request):
-    return HttpResponse ("3 bedroom flat")
+    return HttpResponse ("3 bedroom flat <a href= '/'>home</a>")
 
 def newlineremove(request):
-    return HttpResponse ("4 bedroom flat")
+    return HttpResponse ("4 bedroom flat <a href= '/'>home</a>")
 
 def spaceremove(request):
-    return HttpResponse ("Furnished flat")
+    return HttpResponse ("Furnished flat <a href= '/'>home</a>")
 
 def charcount(request):
-    return HttpResponse ("2 story mansion")
+    return HttpResponse ("2 story mansion <a href= '/'>home</a>")
     
