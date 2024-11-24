@@ -18,9 +18,28 @@
 header {
   width: 100%;
   min-height: 120vh;
-  background-image: url(/static/home-images/hero.jpg);
+  background-image: url(/static/Images/hero.jpg);
   background-position: center;
   background-size: cover;
+  position: relative;
+  z-index: 2;
+  color: #fff; /* Use white or light text for contrast */
+}
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the opacity value (0.1 to 0.9) for darkness */
+  z-index: -1;
+}
+
+/* .content {
+  position: relative;
+  z-index: 2;
+  color: #fff; Use white or light text for contrast */
 }
 nav {
   display: flex;
