@@ -98,7 +98,8 @@ button {
   font-weight: bold !important;
   font-size: 24px;
   border-radius: 5px;
-  background: linear-gradient(110deg, #c50529 40%, #833556 60%);
+  background: linear-gradient(110deg, #B6862C 40%, #8E6E2F 60%);
+
 }
 #check-btn {
   font-size: 20px;
