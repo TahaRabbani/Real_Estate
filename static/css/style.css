@@ -91,7 +91,7 @@ nav ul li a:hover::after {
   letter-spacing: 1px;
   margin-bottom: 3%;
 }
-button {
+.head a {
   padding: 15px 40px;
   color: white;
   cursor: pointer;
