@@ -28,13 +28,23 @@ Including another URLconf
 #     path ('charcount', views.charcount, name= 'charcount'),
 #     # path ('about', views.about, name= 'about'),
 # ]
-from django.contrib import admin
-from django.urls import path, include
-from . import views
 
+# Importing Django's admin module to enable the admin interface
+from django.contrib import admin
+# Importing path and include functions for defining URL pattern
+from django.urls import path, include
+# Importing views from the current directory for handling specific routes
+from . import views
+# Defining the URL patterns for the project
 urlpatterns = [
+    # Route for the admin interface
+    # Maps '/admin/' to the Django admin site
     path('admin/', admin.site.urls),
+    # Route for the admin interface
+    # Maps '/admin/' to the Django admin site
     path('', views.home, name='home'),
+    # Route for the plots page
+    # Maps '/plots/' to the 'plots' view defined in views.py
     path('plots/', views.plots, name='plots'),
 ]
 

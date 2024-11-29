@@ -5,45 +5,50 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  outline: none;
-  border: none;
-  list-style: none;
-  text-decoration: none;
-  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box; /* Ensures consistent box-sizing across elements */
+  outline: none; /* Removes default outline for focused elements */
+  border: none;  /* Removes default borders */
+  list-style: none; /* Removes default bullet points for lists */
+  text-decoration: none; /* Removes underline from links */
+  font-family: "Montserrat", sans-serif; /* Sets the default font family */
 }
+/* Styling for text selection */
 ::selection {
-  background-color: #c50529;
+  background-color: #c50529; /* Highlight color when text is selected */
 }
+/* Header Section */
 header {
   width: 100%;
-  min-height: 120vh;
-  background-image: url(/static/Images/hero.jpg);
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  z-index: 2;
+  min-height: 120vh; /* Ensures the header covers at least 120% of the viewport height */
+  background-image: url(/static/Images/hero.jpg); /* Background image for the header */
+  background-position: center; /* Centers the image */
+  background-size: cover; /* Ensures the image covers the entire header */
+  position: relative; /* Enables positioning of child elements */
+  z-index: 2; /* Places the header above other elements */
   color: #fff; /* Use white or light text for contrast */
 }
+/* Overlay for the header background */
 header::before {
-  content: "";
+  content: ""; /* Creates a pseudo-element for the overlay */
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: -1;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  z-index: -1; /* Places the overlay behind the header content */
 }
+/* Navigation Bar */
 nav {
-  display: flex;
-  padding: 2% 5%;
+  display: flex; /* Aligns child elements in a row */
+  padding: 2% 5%; /* Adds padding for spacing */
 }
 nav img {
-  width: 90px;
-  height: 90px;
-  cursor: pointer;
+  width: 90px; /* Sets logo width */
+  height: 90px; /* Sets logo height */
+  cursor: pointer; /* Changes cursor to pointer on hover */
 }
+/* Navigation menu styling */
 nav ul {
   text-align: right;
   flex: 1;
@@ -52,7 +57,7 @@ nav ul {
   align-items: center;
 }
 nav ul li {
-  padding: 6px 15px;
+  padding: 6px 15px; /* Adds spacing around each menu item */
 }
 nav ul li a {
   color: white;
@@ -72,6 +77,7 @@ nav ul li a::after {
 nav ul li a:hover::after {
   width: 100%;
 }
+/* Header Content */
 .head {
   text-align: center;
   justify-content: center;
@@ -109,6 +115,7 @@ nav ul li a:hover::after {
   cursor: pointer;
   display: none;
 }
+/* Checkbox for responsive menu */
 #check {
   display: none;
 }
@@ -159,7 +166,7 @@ nav ul li a:hover::after {
     font-size: 16px;
   }
 }
-
+/* Card images */
 .card img{
   aspect-ratio: 4 / 3;
   object-fit: cover;

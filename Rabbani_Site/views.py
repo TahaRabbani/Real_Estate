@@ -29,11 +29,18 @@
 
 # def charcount(request):
 #     return HttpResponse ("2 story mansion <a href= '/'>home</a>")
-    
-from django.shortcuts import render
 
+
+# Importing the render function from Django's shortcuts module
+# 'render' is used to generate and return an HTTP response with a specified template   
+from django.shortcuts import render
+# Home view function
+# Handles requests to the home page
+# Takes a request object as an argument and renders the 'index.html' template
 def home(request):
     return render(request, 'index.html')
-
+# Plots view function
+# Handles requests to the plots page
+# Renders the 'pages/plots.html' template
 def plots(request):
     return render(request, 'pages/plots.html')
