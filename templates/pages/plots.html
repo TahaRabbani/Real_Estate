@@ -55,8 +55,14 @@
         </div>
         <!-- The following section for displaying content like construction details would go here -->
         <div class="row mt-5"> <!-- Bootstrap row to organize the content -->
+            <div class="col-md-12 mb-3">
+                <div class="d-flex justify-content-between">
+                    <input type="text" id="searchInput" class="form-control w-25" placeholder="Search for properties..." onkeyup="filterCards()">
+                    <button class="btn btn-secondary py-1 px-2">Sort by</button>
+                </div>
+            </div>
             <div class="col-md-6">
-                <div class="card mb-3 shadow shadow-md">
+                <div class="card mb-3 shadow shadow-md card-item" data-name="Downtown Villas">
                     <div class="row g-0">
                         <div class="col-md-4">
                             <img src="/static/Images/flat 12.jpg" class="img-fluid rounded-start h-100" alt="...">
@@ -86,7 +92,7 @@
                 </div>
             </div> 
             <div class="col-md-6">
-                <div class="card mb-3 shadow shadow-md">
+                <div class="card mb-3 shadow shadow-md card-item" data-name="Skyline Heights">
                     <div class="row g-0">
                         <div class="col-md-4">
                             <img src="/static/Images/flat 1.avif" class="img-fluid rounded-start h-100" alt="...">
@@ -117,7 +123,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="card mb-3 shadow shadow-md">
+                <div class="card mb-3 shadow shadow-md card-item" data-name="Urban Oasis">
                     <div class="row g-0">
                         <div class="col-md-4">
                             <img src="/static/Images/flat 2.avif" class="img-fluid rounded-start h-100" alt="...">
@@ -147,7 +153,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="card mb-3 shadow shadow-md">
+                <div class="card mb-3 shadow shadow-md card-item" data-name="The Karachi Residences">
                     <div class="row g-0">
                         <div class="col-md-4">
                             <img src="/static/Images/flat 3.avif" class="img-fluid rounded-start h-100" alt="...">
@@ -177,7 +183,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="card mb-3 shadow shadow-md">
+                <div class="card mb-3 shadow shadow-md card-item" data-name="Parkview Apartments">
                     <div class="row g-0">
                         <div class="col-md-4">
                             <img src="/static/Images/flat 4.avif" class="img-fluid rounded-start h-100" alt="...">
@@ -207,7 +213,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="card mb-3 shadow shadow-md">
+                <div class="card mb-3 shadow shadow-md card-item" data-name="Metropolitan suites">
                     <div class="row g-0">
                         <div class="col-md-4">
                             <img src="/static/Images/flat 5.avif" class="img-fluid rounded-start h-100" alt="...">
@@ -237,7 +243,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="card mb-3 shadow shadow-md">
+                <div class="card mb-3 shadow shadow-md card-item" data-name="Harbor Point Flats">
                     <div class="row g-0">
                         <div class="col-md-4">
                             <img src="/static/Images/flat 6.avif" class="img-fluid rounded-start h-100" alt="...">
@@ -267,7 +273,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="card mb-3 shadow shadow-md">
+                <div class="card mb-3 shadow shadow-md card-item" data-name="Cityscape Living">
                     <div class="row g-0">
                         <div class="col-md-4">
                             <img src="/static/Images/flat 7.avif" class="img-fluid rounded-start h-100" alt="...">
@@ -297,7 +303,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="card mb-3 shadow shadow-md">
+                <div class="card mb-3 shadow shadow-md card-item" data-name="Golden Horizon">
                     <div class="row g-0">
                         <div class="col-md-4">
                             <img src="/static/Images/flat 8.avif" class="img-fluid rounded-start h-100" alt="...">
@@ -327,7 +333,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="card mb-3 shadow shadow-md">
+                <div class="card mb-3 shadow shadow-md card-item" data-name="Seaview Residences">
                     <div class="row g-0">
                         <div class="col-md-4">
                             <img src="/static/Images/flat 9.avif" class="img-fluid rounded-start h-100" alt="...">
@@ -357,7 +363,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="card mb-3 shadow shadow-md">
+                <div class="card mb-3 shadow shadow-md card-item" data-name="Pearl Residency">
                     <div class="row g-0">
                         <div class="col-md-4">
                             <img src="/static/Images/flat 10.avif" class="img-fluid rounded-start h-100" alt="...">
@@ -387,7 +393,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="card mb-3 shadow shadow-md">
+                <div class="card mb-3 shadow shadow-md card-item" data-name="Aurora Apartments">
                     <div class="row g-0">
                         <div class="col-md-4">
                             <img src="/static/Images/flat 11.jpg" class="img-fluid rounded-start h-100" alt="...">
@@ -418,7 +424,21 @@
             </div>
         </div>
     </div>
-
+    <script>
+        function filterCards() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.card-item');
+    
+            cards.forEach(card => {
+                const propertyName = card.getAttribute('data-name').toLowerCase();
+                if (propertyName.includes(input)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script> 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>

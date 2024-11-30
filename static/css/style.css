@@ -16,6 +16,9 @@
 ::selection {
   background-color: #c50529; /* Highlight color when text is selected */
 }
+a{
+  text-decoration: none !important;
+}
 /* Header Section */
 header {
   width: 100%;
@@ -64,7 +67,7 @@ nav ul li a {
   font-size: 16px;
 }
 nav ul li a:hover {
-  color: #c50529;
+  color: #e8c22d;
 }
 nav ul li a::after {
   content: "";
@@ -72,7 +75,7 @@ nav ul li a::after {
   height: 2px;
   display: block;
   transition: 0.6s;
-  background-color: #c50529;
+  background-color: #e8c22d;
 }
 nav ul li a:hover::after {
   width: 100%;
