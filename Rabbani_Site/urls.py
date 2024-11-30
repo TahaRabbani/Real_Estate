@@ -46,5 +46,8 @@ urlpatterns = [
     # Route for the plots page
     # Maps '/plots/' to the 'plots' view defined in views.py
     path('plots/', views.plots, name='plots'),
-]
+    path('contact/', views.contact, name='contact'),
+    path('send-message/', views.send_message, name='send_message'),
+]  
+
 

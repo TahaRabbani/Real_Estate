@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- Declares the document type and specifies that the page uses HTML5 -->
+<html lang="en"> <!-- Specifies that the page content is in English, which is good for accessibility and SEO -->
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta tags define the character encoding and viewport settings for mobile responsiveness -->
+    <meta charset="UTF-8"> <!-- Ensures the correct character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Ensures the page scales correctly on different screen sizes -->
+    <!-- The title tag sets the title of the page, which appears on the browser tab -->
     <title>Plots</title>
+    <!-- External CSS links are provided for custom styles (style.css), Font Awesome icons, and Bootstrap framework -->
     <link rel="stylesheet" href="/static/css/style.css" />
     <!-- CSS Link  -->
     <link rel="shortcut icon" href="/static/Images/favicon.png" />
@@ -14,37 +17,44 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
-<body style="background-color: rgb(3 13 18);">
+<body style="background-color: rgb(3 13 18);">  <!-- The body has a custom dark background color -->
     <header>
+        <!-- The navigation bar includes a responsive toggle for smaller screens -->
         <nav>
+            <!-- Input checkbox with label toggles the mobile navigation menu -->
           <input type="checkbox" id="check" />
           <label for="check" id="check-btn">
             <i class="fas fa-bars"></i>
           </label>
           <img src="/static/Images/logo.png" alt="logo" />
+          <!-- The navigation links are organized into an unordered list -->
           <ul>
+            <!-- Links to different sections or pages of the site -->
               <li><a href="/">Home</a></li>
               <li><a href="/plots/">Houses</a></li>
               <li><a href="">Plots</a></li>
               <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="contact/">Contact</a></li>
           </ul>
         </nav>
+        <!-- The header section provides a prominent heading and subheading for the site -->
         <div class="head">
           <h1>
             Where Every Dream <br />
             Finds A Home!
-          </h1>
+          </h1><!-- Main heading for the site -->
           <p>Jaha aapke har khuaabo ki taqmeel ho.</p>
           <a href="" class="text-decoration-none">FIND YOUR DREAM HOME</a>
         </div>
       </header>
+      <!-- Main content of the page starts here, within a Bootstrap container for layout -->
     <div class="container mt-5">
         <div class="text-center text-white">
             <h1 style="font-weight: 900;">Our Constructions</h4>
             <small class="fst-italic">"Building Dreams, Crafting Realities"</small>
         </div>
-        <div class="row mt-5">
+        <!-- The following section for displaying content like construction details would go here -->
+        <div class="row mt-5"> <!-- Bootstrap row to organize the content -->
             <div class="col-md-6">
                 <div class="card mb-3 shadow shadow-md">
                     <div class="row g-0">

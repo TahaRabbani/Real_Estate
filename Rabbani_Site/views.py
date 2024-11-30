@@ -34,9 +34,12 @@
 # Importing the render function from Django's shortcuts module
 # 'render' is used to generate and return an HTTP response with a specified template   
 from django.shortcuts import render
-# Home view function
-# Handles requests to the home page
-# Takes a request object as an argument and renders the 'index.html' template
+import csv
+from django.shortcuts import render
+from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
+
+
 def home(request):
     return render(request, 'index.html')
 # Plots view function
@@ -44,3 +47,26 @@ def home(request):
 # Renders the 'pages/plots.html' template
 def plots(request):
     return render(request, 'pages/plots.html')
+
+def contact(request):
+    return render(request, 'pages/contact.html')
+
+@csrf_exempt
+def send_message(request):
+    if request.method == 'POST':
+        full_name = request.POST.get('full_name')
+        email = request.POST.get('email')
+        message = request.POST.get('message')
+
+        # Save to CSV file
+        file_path = 'static/user_data.csv'  # Change to your desired path
+        try:
+            with open(file_path, mode='a', newline='', encoding='utf-8') as file:
+                writer = csv.writer(file)
+                writer.writerow([full_name, email, message])
+        except Exception as e:
+            return HttpResponse(f"Error saving message: {e}", status=500)
+
+        return HttpResponse("Message sent successfully!", status=200)
+    
+    return HttpResponse("Invalid request method.", status=400)
