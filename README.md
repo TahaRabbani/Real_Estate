@@ -1,5 +1,5 @@
-# APP NAME
-
+# Website NAME
+Rabbani_Site
 # GitHub Repository
 The source code for this project is available on GitHub: https://github.com/TahaRabbani/Real_Estate
 
@@ -25,7 +25,7 @@ pip install -r requirements.txt
 - Press the x key to do xxyy.
 - xxyy
 
-### Running the Game
+### Running the Website
 ```python
 python main.py
 ```
@@ -47,10 +47,3 @@ The following libraries are used in this project:
 ## Project Structure
 - `ErrorHandling/`: Contains classes for handling various errors.
 xxyy
-
-## Unit Tests (optional)
-The project includes xxyy
-
-To run the unit tests, navigate to the project directory and xxyy
-
-This will run all the test cases defined in the `UnitTest.py` file.
