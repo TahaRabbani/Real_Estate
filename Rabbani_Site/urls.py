@@ -14,39 +14,24 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-# from django.contrib import admin
-# from django.urls import path
-# from . import views
 
-# urlpatterns = [
-#     path('admin/', admin.site.urls),
-#     path ('', views.index, name= 'index'),
-#     path ('removepunc', views.removepunc, name= 'rempun'),
-#     path ('capitalizefirst', views.capfirst, name= 'capfirst'),
-#     path ('newlineremove', views.newlineremove, name= 'newlineremove'),
-#     path ('spaceremove', views.spaceremove, name= 'spaceremove'),
-#     path ('charcount', views.charcount, name= 'charcount'),
-#     # path ('about', views.about, name= 'about'),
-# ]
-
-# Importing Django's admin module to enable the admin interface
+# import admin from django framework
 from django.contrib import admin
-# Importing path and include functions for defining URL pattern
+# import paths
 from django.urls import path, include
-# Importing views from the current directory for handling specific routes
+
 from . import views
-# Defining the URL patterns for the project
+
 urlpatterns = [
-    # Route for the admin interface
-    # Maps '/admin/' to the Django admin site
+    # the path setting for admin 
     path('admin/', admin.site.urls),
-    # Route for the admin interface
-    # Maps '/admin/' to the Django admin site
+    # the path setting for home 
     path('', views.home, name='home'),
-    # Route for the plots page
-    # Maps '/plots/' to the 'plots' view defined in views.py
+    # the path setting for plots
     path('plots/', views.plots, name='plots'),
+    # the path setting for contact
     path('contact/', views.contact, name='contact'),
+    # the path setting for send messages in contact page
     path('send-message/', views.send_message, name='send_message'),
 ]  
 

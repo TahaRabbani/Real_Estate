@@ -4,46 +4,77 @@ Rabbani_Site
 The source code for this project is available on GitHub: https://github.com/TahaRabbani/Real_Estate
 
 ## Identification
-- **Name:** 
-- **P-number:** 
-- **Course code:** 
+- **Name: Taha Bin Rabbani 
+- **P-number: P450964
+- **Course code: KICL IY499
 
 ## Declaration of Own Work
-I confirm that this assignment is my own work.
+I confirmed that this assignment is my own work.
 Where I have referred to academic sources, I have provided in-text citations and included the sources in the final reference list.
 
 ## Introduction
-This code represents a simple implementation of the xx using the xx library. The game consists of xxyy
+Rabbani Site is a static website with some incredible features like, searching and in header section
+ 4 out 5 links are active (Home ,Plots ,Houses, Contact us). In our website one of the incredible feature
+is that you have any queries you can reach us out on our contact us page and through searching option its easy for user to find their dream flats and i designed the logo by myself.
 
 ## Installation
-To run the game, ensure you have Python installed, and then install the required dependencies from the `requirements.txt` file using the following command:
-```bash
-pip install -r requirements.txt
-```
+1. *Prerequisites*:
+   - Ensure you have Python 3.8 or later installed.
+   - Install a virtual environment manager (optional but recommended).
 
-## How to Play
-- Press the x key to do xxyy.
-- xxyy
+2. *Setup*:
+   - Clone the repository:
+     Use Git bash
+     git clone https://github.com/TahaRabbani/Real_Estate.git
+     cd Real_Estate
+     cd Rabbani_Site
+   - Create and activate a virtual environment:
+     Use Git bash
+     python -m venv venv
+     source venv/bin/activate    # On Linux/Mac
+     venv\Scripts\activate       # On Windows
 
-### Running the Website
-```python
-python main.py
-```
+3. *Run the Development Server*:
+   Use Git bash
+   python manage.py runserver
 
-### Running Unit Tests
-```python
-python UnitTest.py
-```
+---
 
-## Game Elements
-- xxyy 
-- xxyy 
+## How to use
+1. *Running the Application*:
+   - Open your browser and navigate to http://127.0.0.1:8000 after starting the server.
+   - Or just write http://localhost:8000/ in your browser URL
+
+2. *Testing*:
+   - Run unit tests:
+     Use Git bash
+     python manage.py test
+
+---
+
+## Features
+- Feature 1: Searching, in plots,houses section 
+- Feature 2: The feedback of the user of contact page will automatically save the Data in csv file.
+- Feature 3: 4 out 5 links are active in header section.
+
+---
 
 ## Libraries Used
-The following libraries are used in this project:
-- Pygame
-- xxyy
+- *Django*: Web framework for the backend.
 
+---
 ## Project Structure
-- `ErrorHandling/`: Contains classes for handling various errors.
-xxyy
+Rabbani_Site/
+├── manage.py          # Django's command-line utility
+├── db.sqlite3         # Database file But this is Static
+├── Rabbani_Site/      # Main application folder
+│   ├── settings.py    # Configuration settings
+│   ├── urls.py        # URL routes
+│   ├── wsgi.py        # Entry point for WSGI server
+├── static/            # Static files (CSS, JavaScript, images)
+├── templates/         # HTML templates
+├── README.md          # Project documentation
+
+---
+## Credits
+- Developed by Taha Bin Rabbani.
